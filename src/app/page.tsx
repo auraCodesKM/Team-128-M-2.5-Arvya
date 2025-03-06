@@ -78,64 +78,57 @@ export default function Home() {
               __html: '<spline-viewer url="https://prod.spline.design/uFGhXkKIkfYwD86T/scene.splinecode" style="width: 100%; height: 100%;"></spline-viewer>' 
             }} 
           />
-              </div>
+        </div>
               
         {/* Decorative Elements - Subtle and Professional */}
         <div className="absolute inset-0 z-1 pointer-events-none">
           <motion.div 
-            className="absolute top-20 left-20 hidden md:block"
+            className="absolute top-10 md:top-20 left-10 md:left-20 opacity-70 md:opacity-100"
             animate={floatingAnimation}
           >
-            <div className="w-32 h-32 bg-gradient-to-r from-purple-500/5 to-pink-500/5 rounded-full blur-xl"></div>
-            </motion.div>
+            <div className="w-16 md:w-32 h-16 md:h-32 bg-gradient-to-r from-purple-500/5 to-pink-500/5 rounded-full blur-xl"></div>
+          </motion.div>
             
-            <motion.div 
-            className="absolute bottom-20 right-20 hidden md:block"
+          <motion.div 
+            className="absolute bottom-10 md:bottom-20 right-10 md:right-20 opacity-70 md:opacity-100"
             animate={floatingAnimation}
             transition={{ delay: 1 }}
           >
-            <div className="w-40 h-40 bg-gradient-to-r from-blue-500/5 to-purple-500/5 rounded-full blur-xl"></div>
-            </motion.div>
-          </div>
+            <div className="w-20 md:w-40 h-20 md:h-40 bg-gradient-to-r from-blue-500/5 to-purple-500/5 rounded-full blur-xl"></div>
+          </motion.div>
+        </div>
           
         {/* Content Overlay */}
-        <div className="relative z-10 container mx-auto px-4 py-20 h-screen flex flex-col justify-center">
+        <div className="relative z-10 container mx-auto px-4 py-10 md:py-20 min-h-screen flex flex-col justify-center">
           <motion.div 
             initial="hidden"
             animate="visible"
             variants={staggerChildren}
             className="max-w-3xl mx-auto text-center"
           >
-            {/* <motion.div  */}
-              {/* variants={fadeIn} */}
-              {/* // className="inline-block mb-4 px-4 py-1 bg-white rounded-full" */}
-            {/* > */}
-              {/* <span className="text-purple-800 font-medium text-sm"></span> */}
-            {/* </motion.div> */}
-            
             <motion.h1 
               variants={fadeIn}
-              className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-900 to-pink-600"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 md:mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-900 to-pink-600"
             >
               Welcome to Arvya
             </motion.h1>
             
             <motion.p 
               variants={fadeIn}
-              className="text-xl md:text-2xl text-gray-700 mb-8 leading-relaxed"
+              className="text-lg sm:text-xl md:text-2xl text-gray-700 mb-6 md:mb-8 leading-relaxed px-2"
             >
               Breaking barriers in finance. Creating opportunities for women to build wealth, 
               lead companies, and shape the future of investment.
             </motion.p>
             
-            <motion.div variants={fadeIn} className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="/auth/signup">
-                <Button size="lg" className="bg-purple-800 hover:bg-purple-900 text-white rounded-full px-8 py-4 shadow-lg">
+            <motion.div variants={fadeIn} className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center mb-8 md:mb-12">
+              <Link href="/auth/signup" className="w-full sm:w-auto">
+                <Button size="lg" className="w-full sm:w-auto bg-purple-800 hover:bg-purple-900 text-white rounded-full px-6 md:px-8 py-3 md:py-4 shadow-lg">
                   Join the Movement
                 </Button>
               </Link>
-              <Link href="/about">
-                <Button size="lg" className="bg-purple-800 hover:bg-purple-900 text-white rounded-full px-8 py-4 shadow-lg">
+              <Link href="/about" className="w-full sm:w-auto">
+                <Button size="lg" className="w-full sm:w-auto bg-purple-800 hover:bg-purple-900 text-white rounded-full px-6 md:px-8 py-3 md:py-4 shadow-lg">
                   Our Mission
                 </Button>
               </Link>
@@ -144,28 +137,28 @@ export default function Home() {
             {/* Women Empowerment Stats - Professional Design */}
             <motion.div 
               variants={fadeIn}
-              className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12"
+              className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 mb-8 md:mb-12"
             >
-              <div className="bg-white/90 backdrop-blur-sm rounded-xl p-5 shadow-md">
-                <div className="text-3xl font-bold text-purple-800">68%</div>
-                <div className="text-gray-600">Women-Led Growth</div>
+              <div className="bg-white/90 backdrop-blur-sm rounded-xl p-4 md:p-5 shadow-md">
+                <div className="text-2xl md:text-3xl font-bold text-purple-800">68%</div>
+                <div className="text-sm md:text-base text-gray-600">Women-Led Growth</div>
               </div>
-              <div className="bg-white/90 backdrop-blur-sm rounded-xl p-5 shadow-md">
-                <div className="text-3xl font-bold text-purple-800">10K+</div>
-                <div className="text-gray-600">Female Entrepreneurs</div>
+              <div className="bg-white/90 backdrop-blur-sm rounded-xl p-4 md:p-5 shadow-md">
+                <div className="text-2xl md:text-3xl font-bold text-purple-800">10K+</div>
+                <div className="text-sm md:text-base text-gray-600">Female Entrepreneurs</div>
               </div>
-              <div className="bg-white/90 backdrop-blur-sm rounded-xl p-5 shadow-md">
-                <div className="text-3xl font-bold text-purple-800">$1.2B</div>
-                <div className="text-gray-600">Women-Backed Funds</div>
+              <div className="bg-white/90 backdrop-blur-sm rounded-xl p-4 md:p-5 shadow-md">
+                <div className="text-2xl md:text-3xl font-bold text-purple-800">$1.2B</div>
+                <div className="text-sm md:text-base text-gray-600">Women-Backed Funds</div>
               </div>
             </motion.div>
             
             <motion.div 
               variants={fadeIn}
-              className="flex flex-wrap justify-center items-center gap-8 opacity-70"
+              className="flex flex-wrap justify-center items-center gap-4 md:gap-8 opacity-70"
             >
-              <p className="w-full text-sm text-gray-500 mb-2">Partnered with leading women's organizations</p>
-              <div className="h-8">
+              <p className="w-full text-xs sm:text-sm text-gray-500 mb-1 md:mb-2">Partnered with leading women's organizations</p>
+              <div className="h-6 md:h-8">
                 <svg width="120" height="24" viewBox="0 0 120 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M0 0H24V24H0V0Z" fill="#F8BF18"/>
                   <path d="M28 6H44V10H28V6Z" fill="#666666"/>
@@ -173,7 +166,7 @@ export default function Home() {
                   <path d="M28 18H48V22H28V18Z" fill="#666666"/>
                 </svg>
               </div>
-              <div className="h-8">
+              <div className="h-6 md:h-8">
                 <svg width="120" height="24" viewBox="0 0 120 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M60 6H120V10H60V6Z" fill="#666666"/>
                   <path d="M60 12H110V16H60V12Z" fill="#666666"/>
@@ -185,71 +178,71 @@ export default function Home() {
         </div>
 
         {/* Professional Information Cards - Positioned to avoid overlap */}
-        <div className="absolute z-20 top-1/4 -left-4 md:left-10 hidden lg:block">
+        <div className="absolute z-20 top-1/4 -left-4 md:left-10 hidden md:block lg:block">
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 1, duration: 0.8 }}
-            className="bg-white/95 rounded-lg shadow-md p-4 w-64 transform -rotate-3"
+            className="bg-white/95 rounded-lg shadow-md p-3 md:p-4 w-48 md:w-64 transform -rotate-3"
           >
-            <div className="flex items-center gap-3 mb-2">
-              <div className="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center text-white">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div className="flex items-center gap-2 md:gap-3 mb-1 md:mb-2">
+              <div className="w-8 h-8 md:w-10 md:h-10 bg-purple-600 rounded-full flex items-center justify-center text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 md:h-5 md:w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
                 </svg>
               </div>
-              <div className="font-bold text-gray-800">Women in Leadership</div>
+              <div className="font-bold text-sm md:text-base text-gray-800">Women in Leadership</div>
             </div>
-            <div className="text-sm text-gray-600">
+            <div className="text-xs md:text-sm text-gray-600">
               Women-led companies outperform the market by 3.5% annually
             </div>
           </motion.div>
         </div>
           
-        <div className="absolute z-20 top-1/3 -right-4 md:right-10 hidden lg:block">
+        <div className="absolute z-20 top-1/3 -right-4 md:right-10 hidden md:block lg:block">
           <motion.div 
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 1.3, duration: 0.8 }}
-            className="bg-white/95 rounded-lg shadow-md p-4 w-64 transform rotate-3"
+            className="bg-white/95 rounded-lg shadow-md p-3 md:p-4 w-48 md:w-64 transform rotate-3"
           >
-            <div className="flex items-center gap-3 mb-2">
-              <div className="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center text-white">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div className="flex items-center gap-2 md:gap-3 mb-1 md:mb-2">
+              <div className="w-8 h-8 md:w-10 md:h-10 bg-purple-600 rounded-full flex items-center justify-center text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 md:h-5 md:w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                 </svg>
               </div>
-              <div className="font-bold text-gray-800">Closing the Gap</div>
+              <div className="font-bold text-sm md:text-base text-gray-800">Closing the Gap</div>
             </div>
-            <div className="text-sm text-gray-600">
+            <div className="text-xs md:text-sm text-gray-600">
               Dedicated to reducing the 30% gender investment gap
             </div>
           </motion.div>
-      </div>
+        </div>
 
         {/* Scroll Indicator */}
-          <motion.div 
+        <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5, duration: 1 }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10"
+          className="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 z-10"
         >
           <div className="flex flex-col items-center">
-            <p className="text-sm text-gray-500 mb-2">Scroll to explore</p>
-            <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center pt-2">
+            <p className="text-xs md:text-sm text-gray-500 mb-1 md:mb-2">Scroll to explore</p>
+            <div className="w-5 h-8 md:w-6 md:h-10 border-2 border-gray-400 rounded-full flex justify-center pt-1 md:pt-2">
               <motion.div 
                 animate={{ 
-                  y: [0, 8, 0],
+                  y: [0, 6, 0],
                 }}
                 transition={{ 
                   repeat: Infinity,
                   duration: 1.5
                 }}
-                className="w-1.5 h-1.5 bg-gray-400 rounded-full"
+                className="w-1 h-1 md:w-1.5 md:h-1.5 bg-gray-400 rounded-full"
               />
             </div>
-            </div>
-          </motion.div>
+          </div>
+        </motion.div>
       </section>
 
       {/* About Arvya Section */}
