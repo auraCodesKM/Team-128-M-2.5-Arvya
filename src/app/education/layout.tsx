@@ -32,6 +32,14 @@ const sidebarItems: SidebarItem[] = [
     ]
   },
   {
+    title: 'Cryptocurrency & Web3',
+    path: '/education/ethereum-wallet',
+    subItems: [
+      { title: 'Ethereum Wallet Guide', path: '/education/ethereum-wallet' },
+      { title: 'Smart Contract Basics', path: '/education/ethereum-wallet#interact' },
+    ]
+  },
+  {
     title: 'Taxation',
     path: '/education/taxation',
     subItems: [
