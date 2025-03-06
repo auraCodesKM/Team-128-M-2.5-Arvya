@@ -1,6 +1,6 @@
 # Arvya Platform
 
-![Arvya Platform](https://example.com/arvya-banner.png)
+
 <a href="https://ibb.co/cqnWdsP"><img src="https://i.ibb.co/R8wXWJ1/bright-horizontal-banner-with-place-for-text-march-8-women-s-day-different-women-stand-together-conc.jpg" alt="bright-horizontal-banner-with-place-for-text-march-8-women-s-day-different-women-stand-together-conc" border="0"></a>
 ## 🌸 Empowering Women in Finance
 Arvya is a cutting-edge financial platform designed to break barriers in finance and create opportunities for women to build wealth, lead companies, and shape the future of investment. Our mission is to reduce the gender investment gap and promote financial inclusion through education, community, and innovative investment solutions.
