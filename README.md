@@ -1,5 +1,5 @@
 # Arvya
-##She who expands wealth
+## She who expands wealth
 
 <a href="https://ibb.co/cqnWdsP"><img src="https://i.ibb.co/R8wXWJ1/bright-horizontal-banner-with-place-for-text-march-8-women-s-day-different-women-stand-together-conc.jpg" alt="bright-horizontal-banner-with-place-for-text-march-8-women-s-day-different-women-stand-together-conc" border="0"></a>
 ## 🌸 Empowering Women in Finance
