@@ -18,23 +18,41 @@ declare global {
 const BotpressChat: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [scriptError, setScriptError] = useState(false);
+  const [mainScriptLoaded, setMainScriptLoaded] = useState(false);
+  const [configScriptLoaded, setConfigScriptLoaded] = useState(false);
 
-  // Handle script load
-  const handleScriptLoad = () => {
-    try {
-      if (window.botpressWebChat) {
-        window.botpressWebChat.init({
-          configUrl: 'https://files.bpcontent.cloud/2025/03/05/13/20250305133958-64B94GOP.json',
-          hideWidget: true,
-        });
-        setIsLoaded(true);
-        console.log('Botpress initialized successfully');
-      }
-    } catch (error) {
-      console.error('Failed to initialize Botpress:', error);
-      setScriptError(true);
-    }
+  // Handle main script load
+  const handleMainScriptLoad = () => {
+    console.log('Main Botpress script loaded');
+    setMainScriptLoaded(true);
   };
+
+  // Handle config script load
+  const handleConfigScriptLoad = () => {
+    console.log('Botpress config script loaded');
+    setConfigScriptLoaded(true);
+  };
+
+  // Initialize Botpress when both scripts are loaded
+  useEffect(() => {
+    if (mainScriptLoaded && configScriptLoaded) {
+      try {
+        if (window.botpressWebChat) {
+          window.botpressWebChat.init({
+            hideWidget: true,
+          });
+          setIsLoaded(true);
+          console.log('Botpress initialized successfully');
+        } else {
+          console.error('Botpress WebChat not available');
+          setScriptError(true);
+        }
+      } catch (error) {
+        console.error('Failed to initialize Botpress:', error);
+        setScriptError(true);
+      }
+    }
+  }, [mainScriptLoaded, configScriptLoaded]);
 
   // Handle script error
   const handleScriptError = () => {
@@ -70,11 +88,20 @@ const BotpressChat: React.FC = () => {
 
   return (
     <>
-      {/* Load Botpress script */}
+      {/* Load Botpress main script */}
       <Script
-        id="botpress-script"
+        id="botpress-main-script"
         src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"
-        onLoad={handleScriptLoad}
+        onLoad={handleMainScriptLoad}
+        onError={handleScriptError}
+        strategy="lazyOnload"
+      />
+
+      {/* Load Botpress config script */}
+      <Script
+        id="botpress-config-script"
+        src="https://files.bpcontent.cloud/2025/03/05/13/20250305133958-LXOGF5Q2.js"
+        onLoad={handleConfigScriptLoad}
         onError={handleScriptError}
         strategy="lazyOnload"
       />
